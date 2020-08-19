@@ -16,6 +16,10 @@ function getRow(firstRow, secondRow) {
   const secondNum = getNumCh(char, secondRow);
   if (firstNum > secondNum) {
     return firstRow;
+  } else if (firstNum === secondNum) {
+    else if (firstNum === secondNum) {
+        return `${firstRow} 
+        ${secondRow}`;
   } else return secondRow;
 }
 
