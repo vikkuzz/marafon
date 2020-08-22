@@ -37,10 +37,15 @@ function renderHPLife(person) {
   person.elHP.innerText = person.damageHP + "/" + person.defaultHP;
 }
 
+function renderProgressbarHP(person) {
+  person.elProgressbar.style.width = person.damageHP + "%";
+}
+
 function changeHP(count, person) {
   if (person.damageHP < count) {
     person.damageHP = 0;
-    alert("Бедный " + person.name + "проиграл((");
+    alert("Бедный " + person.name + " проиграл((");
+    $btn.disabled = true;
   } else {
     person.damageHP -= count;
   }
