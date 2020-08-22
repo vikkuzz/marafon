@@ -1,21 +1,20 @@
-const $btn = document.getElementById("btn-kick");
+"use strict";
 
-const character = {
+var $btn = document.getElementById("btn-kick");
+var character = {
   name: "Picachu",
   defaultHP: 100,
   damageHP: 100,
   elHP: document.getElementById("health-character"),
-  elProgressbar: document.getElementById("progressbar-character"),
+  elProgressbar: document.getElementById("progressbar-character")
 };
-
-const enemy = {
+var enemy = {
   name: "Charmander",
   defaultHP: 100,
   damageHP: 100,
   elHP: document.getElementById("health-enemy"),
-  elProgressbar: document.getElementById("progressbar-enemy"),
+  elProgressbar: document.getElementById("progressbar-enemy")
 };
-
 $btn.addEventListener("click", function () {
   console.log("Kick");
   console.log(random(20));
@@ -42,10 +41,10 @@ function changeHP(count, person) {
   if (person.damageHP < count) {
     person.damageHP = 0;
     alert("Бедный " + person.name + "проиграл((");
-    $btn.disabled = true;
   } else {
     person.damageHP -= count;
   }
+
   renderHP(person);
 }
 
